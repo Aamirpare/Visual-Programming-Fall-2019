@@ -8,7 +8,19 @@ namespace ClassBasics
 {
     public class Variables
     {
-        int index = 0;
-        bool IsExpired = false;
+        int index;
+        bool IsExpired;
+
+        public Variables(int index, bool expired)
+        {
+            this.index = index;
+            this.IsExpired = expired;
+        }
+
+
+        public void Display()
+        {
+            Console.WriteLine($"Index : { this.index}, Expired : {this.IsExpired}");
+        }
     }
 }
