@@ -4,6 +4,7 @@ This is a very long course that you have to complete in a very short time span. 
 General disscussion, the guidelines, course ouline, evaluvation system and tools and technologies usually discussed in my first introductory lecture would provide you an overview that how fast we require to go to cover the topics of this course throught the semester. 
 
 Regards,
+
 Aamir Parre
 
 aamirpare@gmail.com
