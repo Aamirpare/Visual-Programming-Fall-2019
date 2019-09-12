@@ -13,10 +13,12 @@ namespace ClassBasics
     {
         static void Main(string[] args)
         {
-            Variables x = new Variables();
+            //Variables x = new Variables();
             //x.DemoVaraibles();
             //x.Switch(300);
-            x.ImplicitType();
+            //x.ImplicitType();
+
+           
             Console.ReadKey();
         }
         static void Main1(string[] args)

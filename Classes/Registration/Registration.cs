@@ -70,6 +70,18 @@ namespace Teaching
 {
     public class Registration
     {
+        public int Id { get; set; }
+        public string FullName { get; set; }
 
+        public Registration()
+        {
+            Id = 90;
+            FullName = "Anonymous";
+        }
+        public void Display()
+        {
+            Console.WriteLine("ID : " + Id);
+            Console.WriteLine("Full Name : " + FullName);
+        }
     }
 }
