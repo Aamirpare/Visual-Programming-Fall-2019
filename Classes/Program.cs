@@ -14,23 +14,23 @@ namespace Classes
             x.ImplicitType();
             Console.ReadKey();
         }
-        //static void Mainc(string[] args)
-        //{
+        static void Mainc(string[] args)
+        {
 
 
-        //    T.Registration r2 = new T.Registration();
-        //    Registration r1 = .comnew Registration();
-        //    r1.RollNo = "FA12-BSSE-890";
-        //    r1.FullName = "Unknown Student";
-        //    if (!r1.IsStudentActive())
-        //    {
-        //        r1.ShowRegistration();
-        //    }
+            T.Registration r2 = new T.Registration();
+            Registration r1 = new Registration();
+            r1.RollNo = "FA12-BSSE-890";
+            r1.FullName = "Unknown Student";
+            if (!r1.IsStudentActive())
+            {
+                r1.ShowRegistration();
+            }
 
-        //    var x = r1.Clone();
-        //    x.ShowRegistration();
-        //    Console.ReadKey();
-        //}
+            var x = r1.Clone();
+            x.ShowRegistration();
+            Console.ReadKey();
+        }
 
     }
 }
