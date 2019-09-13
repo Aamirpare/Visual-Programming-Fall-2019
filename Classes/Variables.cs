@@ -53,5 +53,53 @@ namespace Classes
             //price = balance;
            
         }
+        public void AutomaticAssignment()
+        {
+            //char to ushort, uint, ulong, float, double, decimal
+
+            Console.WriteLine("char => ushort, uint, ulong, float, double, decimal");
+            char s = 'a';
+            ushort us = s;
+            uint ui = 'a';
+            ulong ul = s;
+            float f = s;
+            double d = s;
+            decimal dm = s;
+            Console.WriteLine($"{s}, {us}, {ui}, {ul}, {f}, {d}, {dm}");
+
+            sbyte sb = -127;
+            Console.WriteLine("Ushort => short, int, long, float, double, decimal");
+            short sh = sb;
+            int i = sb;
+            long l = sb;
+            f = sb;
+            d = sb;
+            dm = sb;
+            Console.WriteLine($"{sb}, {sh}, {i}, {l}, {f}, {d}, {dm}");
+
+            byte b = 80;
+            Console.WriteLine("byte => short, ushort, int, uint, long, ulong, float, double, decimal");
+            sh = b;
+            us = b;
+            i = b;
+            ui = b;
+            l = b;
+            ul = b;
+            f = b;
+            d = b;
+            dm = b;
+            Console.WriteLine($"{sh}, {us}, {i}, {ui}, {l}, {ul}, {f}, {d}, {dm}");
+
+            sh = 845;
+            Console.WriteLine("short => int, long, float, double, or decimal");
+            i = sh;
+            l = sh;
+            f = sh;
+            d = sh;
+            dm = sh;
+            Console.WriteLine($"{i}, {l}, {f}, {d}, {dm}");
+
+
+        }
     }
 }
