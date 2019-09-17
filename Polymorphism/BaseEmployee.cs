@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Polymorphism
 {
-    public interface IEmployee
+
+    interface IEmployee
     {
         void Upload();
     }
@@ -54,7 +55,7 @@ namespace Polymorphism
         
     }
 
-    public class Staff : BaseEmployee
+    public class Staff : BaseEmployee, IEmployee
     {
         public int Hours { get; set; }
         public decimal Rate { get; set; }
@@ -63,6 +64,11 @@ namespace Polymorphism
         //    //base.Print();
         //    Console.WriteLine("The staff header");
         //}
+
+        public void Upload()
+        {
+            Console.WriteLine("Staff employee documents are uploaded.");
+        }
 
         public Staff(int id, string fname): base(id, fname)
         {
