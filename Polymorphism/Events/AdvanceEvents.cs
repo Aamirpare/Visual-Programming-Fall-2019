@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Polymorphism.Events
+namespace Polymorphism.Events.Advance
 {
-    //public delegate void MessageHandler();
+    public delegate void MessageHandler();
     public class MessageEventArgs : EventArgs
     {
         public int Size { get; set; }
@@ -12,15 +12,15 @@ namespace Polymorphism.Events
     {
         //public event MessageHandler BeforeSent;
         //public event MessageHandler AfterSent;
-        
+
         public event EventHandler<MessageEventArgs> BeforeSent;
         public event EventHandler<MessageEventArgs> AfterSent;
         public string Content { get; set; }
-        public void Send(MessageEventArgs args)
+        public void Send(MessageEventArgs e)
         {
-            this.OnBeforeSend(args);
-            Console.WriteLine($"Content: {Content}{Environment.NewLine}Size : {args.Size} ");
-            this.OnAfterSent(args);
+            this.OnBeforeSend(e);
+            Console.WriteLine($"Content: {Content}{Environment.NewLine} Size : {e.Size}");
+            this.OnAfterSent(e);
         }
         protected virtual void OnBeforeSend(MessageEventArgs e)
         {
@@ -34,7 +34,7 @@ namespace Polymorphism.Events
         
     }
 
-    public class SimpleMessageService 
+    public class SimpleMessageService
     {
 
         Message message = new Message();
@@ -45,36 +45,43 @@ namespace Polymorphism.Events
 
         public SimpleMessageService()
         {
-            message.Content = "Simple Message service ....";
             message.AfterSent += Message_AfterSent;
             message.BeforeSent += Message_BeforeSent;
-            message.Send(args);
         }
 
+
+        public void Send()
+        {
+            message.Content = "This is a very simple message, required to send immidiately";
+            message.Send(args);
+        }
         public void Message_BeforeSent(object sender, EventArgs e)
         {
             MessageEventArgs args = e as MessageEventArgs;
-            Console.WriteLine("Before sms sent event. {0}", args.Size );
+            Console.WriteLine("Before sms sent event. {0}", args.Size);
         }
 
         public void Message_AfterSent(object sender, EventArgs e)
         {
             Console.WriteLine("After sms sent event.");
-        }        
+        }
     }
 
-    public class EmailService 
+    public class EmailService
     {
-        Message Message = new Message();
+        private Message Message = new Message();
         MessageEventArgs args = new MessageEventArgs()
         {
             Size = 80
         };
         public EmailService()
         {
-            this.Message.Content = "The task assigned to me was very difficult to manage but as alwasys i enjoy challengs, i completed it with lot of fun.";
             this.Message.AfterSent += OnAfterSent;
             this.Message.BeforeSent += OnBeforeSent;
+        }
+        public void Send()
+        {
+            this.Message.Content = "The task assigned to me was very difficult to manage but as alwasys i enjoy challengs,\n i completed it with a lot of fun.";
             this.Message.Send(args);
         }
 
@@ -85,6 +92,20 @@ namespace Polymorphism.Events
         private void OnBeforeSent(object sender, EventArgs e)
         {
             Console.WriteLine("Before email sent event");
+        }
+    }
+
+    public static class AdvanceEventDemo
+    {
+        static void Main_advance(string[] args)
+        {
+            SimpleMessageService sm = new SimpleMessageService();
+            sm.Send();
+            Console.WriteLine("");
+
+            EmailService es = new EmailService();
+            es.Send();
+            Console.ReadKey();
         }
     }
 }

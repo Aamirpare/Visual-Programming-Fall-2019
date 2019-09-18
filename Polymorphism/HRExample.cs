@@ -1,4 +1,5 @@
-﻿namespace Polymorphism.HumanResource
+﻿using System;
+namespace Polymorphism.HumanResource
 {
     public abstract class BaseEmployee
     {
@@ -41,5 +42,30 @@
             return this.Salary;
         }
     }
-}
 
+    public class PolymorphismDemo
+    {
+        static void Main_HRDemo(string[] args)
+        {
+            BaseEmployee be = new AdminEmployee();
+            be.Print();
+
+            be = new FacultyEmployee()
+            {
+                EmployeeID = 1,
+                FirstName = "Abdul",
+                LastName = "Makid"
+            };
+            be.Print();
+
+            be = new ContractEmployee()
+            {
+                Hours = 300,
+                Rate = 18
+            };
+
+            be.Print();
+            Console.ReadKey();
+        }
+    }
+}
