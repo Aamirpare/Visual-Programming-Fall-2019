@@ -25,10 +25,11 @@ namespace Polymorphism.Events.Basic
 
         protected virtual void OnAfterSent()
         {
-            if( AfterSent != null)
-            {
-                AfterSent();
-            }
+            //if( AfterSent != null)
+            //{
+            //    AfterSent();
+            //}
+            AfterSent?.Invoke();
         }
         
     }
@@ -44,7 +45,7 @@ namespace Polymorphism.Events.Basic
 
         public void Send()
         {
-            message.Content = "Simple Message service content....";
+            message.Content = "Simple Message service content has been sent";
             message.Send();
         }
         public void Message_BeforeSent()
@@ -84,7 +85,7 @@ namespace Polymorphism.Events.Basic
 
     public static class EventDemo
     {
-        static void Main(string[] args)
+        static void Main_events(string[] args)
         {
             SimpleMessageService sm = new SimpleMessageService();
             sm.Send();

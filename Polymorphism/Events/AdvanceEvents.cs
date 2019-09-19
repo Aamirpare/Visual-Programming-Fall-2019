@@ -6,6 +6,7 @@ namespace Polymorphism.Events.Advance
     public class MessageEventArgs : EventArgs
     {
         public int Size { get; set; }
+        public int BandWidth { get; set; }
     }
 
     public class Message
@@ -40,7 +41,8 @@ namespace Polymorphism.Events.Advance
         Message message = new Message();
         MessageEventArgs args = new MessageEventArgs
         {
-            Size = 90
+            Size = 90,
+            BandWidth = 1000
         };
 
         public SimpleMessageService()
@@ -97,7 +99,7 @@ namespace Polymorphism.Events.Advance
 
     public static class AdvanceEventDemo
     {
-        static void Main_advance(string[] args)
+        static void Main(string[] args)
         {
             SimpleMessageService sm = new SimpleMessageService();
             sm.Send();

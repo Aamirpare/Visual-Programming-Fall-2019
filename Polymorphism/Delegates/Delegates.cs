@@ -6,19 +6,16 @@ using System.Threading.Tasks;
 
 namespace Polymorphism.Delegates
 {
-    class Program
+    public class DelegateDemo
     {
         // declare delegate
         public delegate void Print(int value);
 
-
-
-        static void Main199(string[] args)
+        //Example 1 - Using Delegates 
+        public void DelegateImplementation()
         {
             // Print delegate points to PrintNumber
             Print printDel = PrintNumber;
-            
-
             // or
             // Print printDel = new Print(PrintNumber);
 
@@ -45,7 +42,24 @@ namespace Polymorphism.Delegates
             Console.ReadKey();
         }
 
-        public static void Main_the_Old(string[] args)
+        //Example 2 - Passing Delegates as parameters
+        public void DelegatesAsParameters()
+        {
+            // Print delegate points to PrintNumber
+            Print printDel = PrintNumber;
+            // or
+            // Print printDel = new Print(PrintNumber);
+
+            Print newDel = PrintIndex;
+
+            PrintHelper(newDel, 9000);
+            PrintHelper(printDel, 290);
+
+
+            Console.ReadKey();
+        }
+        //Example 3 - Delegate Multicasting
+        public  void DelegateMulticasting()
         {
             Print printDel = PrintNumber;
             printDel += PrintHexadecimal;
@@ -59,30 +73,38 @@ namespace Polymorphism.Delegates
             Console.ReadKey();
         }
 
-        public static void PrintNumber(int num)
+
+        //Methods called using delegate reference
+        public void PrintNumber(int num)
         {
             Console.WriteLine("Number: {0,-12:N0}", num);
         }
 
-        public static void PrintMoney(int money)
+        public void PrintMoney(int money)
         {
             Console.WriteLine("Money: {0:C}", money);
         }
 
-
-        public static void PrintIndex(int index)
+        public void PrintIndex(int index)
         {
             Console.WriteLine("Index : " + index);
         }
-
-        public static void PrintHelper(Print newDelegate, int numToPrint)
+        public void PrintHelper(Print newDelegate, int numToPrint)
         {
             newDelegate(numToPrint);
         }
-
-        public static void PrintHexadecimal(int dec)
+        public void PrintHexadecimal(int dec)
         {
             Console.WriteLine("Hexadecimal: {0:X}", dec);
         }
+        public static void Main_delegate(string[] args)
+        {
+            DelegateDemo demo = new DelegateDemo();
+            //demo.DelegateImplementation();
+            //demo.DelegatesAsParameters();
+            demo.DelegateMulticasting();
+            Console.ReadKey();
+        }
+
     }
 }
