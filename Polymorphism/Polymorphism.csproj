@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEmployee.cs" />
+    <Compile Include="Collections\Collections.cs" />
     <Compile Include="Delegates\Delegates.cs" />
     <Compile Include="Events\BasicEvents.cs" />
     <Compile Include="Events\AdvanceEvents.cs" />

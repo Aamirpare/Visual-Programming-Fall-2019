@@ -64,7 +64,6 @@ namespace Polymorphism.Delegates
             Print printDel = PrintNumber;
             printDel += PrintHexadecimal;
             printDel += PrintMoney;
-
             //printDel(1000);
 
             printDel -= PrintHexadecimal;

@@ -99,7 +99,7 @@ namespace Polymorphism.Events.Advance
 
     public static class AdvanceEventDemo
     {
-        static void Main(string[] args)
+        static void Main_advance(string[] args)
         {
             SimpleMessageService sm = new SimpleMessageService();
             sm.Send();
