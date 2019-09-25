@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D85A47BE-DC65-4EC6-B829-7F75B650E897}</ProjectGuid>
+    <ProjectGuid>{98A7C594-F06D-47A1-A051-4F7E1738811B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Polymorphism</RootNamespace>
-    <AssemblyName>Polymorphism</AssemblyName>
+    <RootNamespace>DarkCoding</RootNamespace>
+    <AssemblyName>DarkCoding</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,16 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseEmployee.cs" />
-    <Compile Include="Collections\Collections.cs" />
-    <Compile Include="Delegates\Delegates.cs" />
-    <Compile Include="Events\BasicEvents.cs" />
-    <Compile Include="Events\AdvanceEvents.cs" />
-    <Compile Include="Generics\ExecuteDemo.cs" />
-    <Compile Include="Generics\GenericCollections.cs" />
-    <Compile Include="Generics\Generics.cs" />
-    <Compile Include="HRExample.cs" />
-    <Compile Include="Interfaces.cs" />
+    <Compile Include="DarkEvents\CricketEvent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

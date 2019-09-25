@@ -7,7 +7,6 @@ namespace Polymorphism.Events.Basic
     {
         public event MessageHandler BeforeSent;
         public event MessageHandler AfterSent;
-
         public string Content { get; set; }
         public void Send()
         {

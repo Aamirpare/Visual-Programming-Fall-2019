@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassBasics", "ClassBasics\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{D85A47BE-DC65-4EC6-B829-7F75B650E897}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkCoding", "DarkCoding\DarkCoding.csproj", "{98A7C594-F06D-47A1-A051-4F7E1738811B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D85A47BE-DC65-4EC6-B829-7F75B650E897}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D85A47BE-DC65-4EC6-B829-7F75B650E897}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D85A47BE-DC65-4EC6-B829-7F75B650E897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98A7C594-F06D-47A1-A051-4F7E1738811B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A7C594-F06D-47A1-A051-4F7E1738811B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A7C594-F06D-47A1-A051-4F7E1738811B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A7C594-F06D-47A1-A051-4F7E1738811B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

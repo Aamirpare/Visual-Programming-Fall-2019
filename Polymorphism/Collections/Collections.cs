@@ -11,7 +11,6 @@ namespace Polymorphism.Collections
     {
         public void ArrayListDemo()
         {
-
             ArrayList al = new ArrayList();
             Console.WriteLine("Array List Demo");
 
@@ -24,27 +23,35 @@ namespace Polymorphism.Collections
             al.Add(1235);
             al.Add(191);
 
-            al.Insert(1, 100);
+            al.Insert(3, 100);
 
-            Console.WriteLine("Capacity: {0} ", al.Capacity);
-            Console.WriteLine("Count: {0}", al.Count);
+           Console.WriteLine("Capacity: {0} ", al.Capacity);
+           Console.WriteLine("Count: {0}", al.Count);
 
             Console.Write("Content: ");
-            foreach (int i in al)
+            foreach (int item in al)
             {
-                Console.Write(i + " ");
+                Console.Write(item + " ");
             }
 
             Console.WriteLine();
-            Console.Write("Sorted Content: ");
+            Console.WriteLine("Sorted Content: ");
             al.Sort();
             foreach (int i in al)
             {
                 Console.Write(i + " ");
             }
 
+            Console.WriteLine("Descending order...");
+            al.Reverse();
+            foreach (int i in al)
+            {
+                Console.Write(i + " ");
+            }
+
+
             al.Clear();
-            Console.WriteLine($"The is now : {al.Count}");
+            Console.WriteLine($"There is now : {al.Count}");
 
             Console.WriteLine();
         }
@@ -73,9 +80,9 @@ namespace Polymorphism.Collections
             }
 
             // Get a collection of the keys.
-            ICollection key = ht.Keys;
+            ICollection keys = ht.Keys;
            
-            foreach (string k in key)
+            foreach (string k in keys)
             {
                 Console.WriteLine(k + ": " + ht[k]);
             }
@@ -90,15 +97,14 @@ namespace Polymorphism.Collections
         public void SortedListDemo()
         {
             SortedList sl = new SortedList();
-
            
-            sl.Add("101", "Kiren Manika");
+            sl.Add("103", "Kiren Manika");
             sl.Add("100", "Roshan Asad");
             sl.Add("102", "Anglina Johnson");
-            sl.Add("103", "Veronika Alleot");
+            sl.Add("109", "Veronika Alleot");
             sl.Add("104", "Mubashir Kazmi");
-            sl.Add("105", "Asad Rabbani Khan");
-            sl.Add("106", "Rehimullah Yousuf Zaie");
+            sl.Add("107", "Asad Rabbani Khan");
+            sl.Add("101", "Rehimullah Yousuf Zaie");
 
             if (sl.ContainsValue("Nushad Ahmed"))
             {
@@ -185,14 +191,15 @@ namespace Polymorphism.Collections
 
     public class CollectionsDemo
     {
-        public static void Main( string [] args)
+        public static void Main_collections( string [] args)
         {
-            //Collections cols = new Collections();
-            ////cols.ArrayListDemo();
+            Collections cols = new Collections();
+            //cols.ArrayListDemo();
             //cols.HashTableDemo();
-            ////cols.SortedListDemo();
+            //cols.SortedListDemo();
             //Console.ReadKey();
             CollectionMenu();
+            Console.ReadKey();
         }
         static void CollectionMenu()
         {
