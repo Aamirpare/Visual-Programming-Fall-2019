@@ -29,14 +29,9 @@ namespace Polymorphism.Generics
             }
         }
     }
-
-    public class ExecuteDemo
+    public class GenericsDemo
     {
-        public ExecuteDemo(int size): base(size)
-        {
-
-        }
-        public static void Main_generics(string[] args)
+        public static void Main_Generics(string[] args)
         {
             GenericArray<string> gArray = new GenericArray<string>(5);
             gArray.SetItem("aamir", 0);
@@ -48,7 +43,7 @@ namespace Polymorphism.Generics
             iArray.SetItem(90,0);
             iArray.SetItem(30,1);
             iArray.SetItem(20,2);
-            iArray.SetItem(20,21);
+            //iArray.SetItem(20,21); //out of bounds
             iArray.Display();
 
             GenericArray<float> fArray = new GenericArray<float>(4);

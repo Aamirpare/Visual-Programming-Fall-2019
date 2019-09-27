@@ -22,7 +22,7 @@ namespace Polymorphism.Collections
             al.Add(2124);
             al.Add(1235);
             al.Add(191);
-
+            //al.Add("sdafkjasd");
             al.Insert(3, 100);
 
            Console.WriteLine("Capacity: {0} ", al.Capacity);
@@ -191,7 +191,7 @@ namespace Polymorphism.Collections
 
     public class CollectionsDemo
     {
-        public static void Main_collections( string [] args)
+        public static void Main_nonGeneric( string [] args)
         {
             Collections cols = new Collections();
             //cols.ArrayListDemo();

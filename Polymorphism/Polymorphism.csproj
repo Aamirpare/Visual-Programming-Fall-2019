@@ -50,6 +50,7 @@
     <Compile Include="Events\AdvanceEvents.cs" />
     <Compile Include="Generics\ExecuteDemo.cs" />
     <Compile Include="Generics\GenericCollections.cs" />
+    <Compile Include="Generics\GenericExample.cs" />
     <Compile Include="Generics\Generics.cs" />
     <Compile Include="HRExample.cs" />
     <Compile Include="Interfaces.cs" />
