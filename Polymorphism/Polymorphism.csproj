@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BaseEmployee.cs" />
     <Compile Include="Collections\Collections.cs" />
+    <Compile Include="Delegates\DelegatesAdvance.cs" />
     <Compile Include="Delegates\Delegates.cs" />
     <Compile Include="Events\BasicEvents.cs" />
     <Compile Include="Events\AdvanceEvents.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Interfaces.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threads\ThreadDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

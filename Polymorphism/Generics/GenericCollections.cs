@@ -16,19 +16,17 @@ namespace Polymorphism.Generics
         List<Student> Students = new List<Student>();
         public GenericCollections()
         {
-            Students.Add(new Student() { StudentID = 101, FullName = "Ahmed 2" });
-            Students.Add(new Student() { StudentID = 102, FullName = "Ahmed 2" });
-            Students.Add(new Student() { StudentID = 103, FullName = "Ahmed 2" });
-            Students.Add(new Student() { StudentID = 104, FullName = "Ahmed 2" });
-            Students.Add(new Student() { StudentID = 105, FullName = "Ahmed 2" });
+            Students.Add(new Student() { StudentID = 101, FullName = "Name 1" });
+            Students.Add(new Student() { StudentID = 102, FullName = "Name 2" });
+            Students.Add(new Student() { StudentID = 103, FullName = "Name 3" });
+            Students.Add(new Student() { StudentID = 104, FullName = "Name 4" });
+            Students.Add(new Student() { StudentID = 105, FullName = "Name 5" });
         }
-
 
         public void Add(Student student)
         {
             Students.Add(student);
         }
-
 
         public Student GetStudent(int index)
         {
@@ -50,7 +48,7 @@ namespace Polymorphism.Generics
     }
     public class GenericCollectionsDemo
     {
-        public static void Main(string[] args)
+        public static void Main_generic_ollections(string[] args)
         {
             GenericCollections c = new GenericCollections();
             c.Display();

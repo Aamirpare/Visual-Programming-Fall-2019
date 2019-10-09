@@ -46,7 +46,7 @@ namespace Polymorphism.Generics
 
     public class ExecuteDemo
     {
-        public static void Main__sdfasd(string[] args)
+        public static void Main_GenericExample(string[] args)
         {
             GenericExample<int> g = new GenericExample<int>();
             g.Display(90);

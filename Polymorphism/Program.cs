@@ -10,7 +10,7 @@ namespace Polymorphism
 {
     class Program
     {
-        static void Main1(string[] args)
+        static void Main_xxxx(string[] args)
         {
             Console.WriteLine("Lectures of Visual Programming");
 
