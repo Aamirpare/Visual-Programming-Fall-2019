@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 
 namespace Polymorphism.Threads
 {
+   
     public class Email
     {
         public string Body { get; set; }
@@ -44,8 +47,6 @@ namespace Polymorphism.Threads
             Console.ReadKey();
         }
     }
-
-
     public class ThreadsInCSharpDemo
     {
         public static void Print()
@@ -69,7 +70,7 @@ namespace Polymorphism.Threads
 
             //ThreadStart ts = new ThreadStart(Print);
             ParameterizedThreadStart pts = new ParameterizedThreadStart(Print);
-            const int SIZE = 10;
+            const int SIZE = 100;
             Thread[] threads = new Thread[SIZE];
             for (int i = 0; i < SIZE; i++)
             {
@@ -89,13 +90,28 @@ namespace Polymorphism.Threads
             count = System.Diagnostics.Process.GetCurrentProcess().Threads.Count;
             Console.WriteLine("Total Inital Threads : " + count);
 
-
             Console.ReadKey();
         }
 
         public static Func<int> GetThreadCount = () => { return Process.GetCurrentProcess().Threads.Count;};
         public static int Count { get { return GetThreadCount(); } }
-        public static void Main(string [] args)
+
+        public static void Main(string[] args)
+        {
+            // CreateAndStartThreads();
+            //var count  = GetThreadCount();
+            //Console.WriteLine("The count : " + count);
+            //Task task = new Task(() => { Console.WriteLine("Task Parallel thread is created"); Console.ReadKey(); });
+            ////task.Start();
+            //task = new Task(() => { Console.WriteLine("Task Parallel thread 3 is created"); Console.ReadKey(); });
+            ////task.Start();
+            //count = GetThreadCount();
+            //Console.WriteLine("The count : " + count);
+
+            InterrupThreads();
+            Console.ReadKey();
+        }
+        public static void Main_oldExercise(string [] args)
         {
             Console.WriteLine("Total Inital Threads : " + Count);
             //CreateAndStartThreads();
@@ -132,7 +148,6 @@ namespace Polymorphism.Threads
             Thread.Sleep(2000);
             sleepingThread.Abort();
         }
-
         private static void SleepIndefinitely()
         {
             Console.WriteLine("Thread '{0}' about to sleep indefinitely.",
