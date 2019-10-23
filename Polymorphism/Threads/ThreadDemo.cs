@@ -96,7 +96,7 @@ namespace Polymorphism.Threads
         public static Func<int> GetThreadCount = () => { return Process.GetCurrentProcess().Threads.Count;};
         public static int Count { get { return GetThreadCount(); } }
 
-        public static void Main(string[] args)
+        public static void Main_threads_last(string[] args)
         {
             // CreateAndStartThreads();
             //var count  = GetThreadCount();

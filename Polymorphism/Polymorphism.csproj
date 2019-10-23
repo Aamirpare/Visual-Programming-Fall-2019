@@ -46,8 +46,12 @@
   <ItemGroup>
     <Compile Include="BaseEmployee.cs" />
     <Compile Include="Collections\Collections.cs" />
+    <Compile Include="Delegates\CSSessional1.cs" />
+    <Compile Include="Delegates\CSSessional1Solution.cs" />
     <Compile Include="Delegates\DelegatesAdvance.cs" />
     <Compile Include="Delegates\Delegates.cs" />
+    <Compile Include="Delegates\Lambdas.cs" />
+    <Compile Include="Evaluations\Sessional1-B.cs" />
     <Compile Include="Events\BasicEvents.cs" />
     <Compile Include="Events\AdvanceEvents.cs" />
     <Compile Include="Generics\ExecuteDemo.cs" />
@@ -56,6 +60,13 @@
     <Compile Include="Generics\Generics.cs" />
     <Compile Include="HRExample.cs" />
     <Compile Include="Interfaces.cs" />
+    <Compile Include="Evaluations\Sessional1-A.cs" />
+    <Compile Include="Observer\CricketData_V1.0.0.1.cs" />
+    <Compile Include="Observer\CricketData_V1.0.0.0.cs" />
+    <Compile Include="Observer\CricketData_V3.0.0.2.cs" />
+    <Compile Include="Observer\CricketData_V3.0.0.1.cs" />
+    <Compile Include="Observer\CricketData_V3.0.0.0.cs" />
+    <Compile Include="Observer\CricketData_V2.cs" />
     <Compile Include="Pizza\PizzaSolution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,5 +75,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

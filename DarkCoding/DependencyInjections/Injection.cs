@@ -37,9 +37,9 @@ namespace DarkCoding.DependencyInjections
 
     }
 
-    public class InjectionDemo
+    public class DependencyInjectionDemo
     {
-        public static void Main_DI(string[] args)
+        public static void Main(string[] args)
         {
             Message message = new Message(new MmsService());
             message.Service.Run();
