@@ -63,7 +63,7 @@ namespace Polymorphism.Observer.V0
     // Driver class 
     public static class CricketDemoApp
     {
-        public static void Main(String [] args)
+        public static void Main_Oberserver_Pattern(String [] args)
         {
             // Pass the displays to Cricket data 
             CricketData cricketData = new CricketData();
