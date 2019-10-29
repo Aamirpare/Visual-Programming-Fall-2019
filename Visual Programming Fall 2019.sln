@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkCoding", "DarkCoding\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluation", "Evaluation\Evaluation.csproj", "{6D24985F-F0C4-47AD-8A2F-2B7D03475A57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstDemo", "CodeFirstDemo\CodeFirstDemo.csproj", "{52B7A52A-6E02-4B0A-A0AD-CE985CA20831}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{6D24985F-F0C4-47AD-8A2F-2B7D03475A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D24985F-F0C4-47AD-8A2F-2B7D03475A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D24985F-F0C4-47AD-8A2F-2B7D03475A57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52B7A52A-6E02-4B0A-A0AD-CE985CA20831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52B7A52A-6E02-4B0A-A0AD-CE985CA20831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52B7A52A-6E02-4B0A-A0AD-CE985CA20831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52B7A52A-6E02-4B0A-A0AD-CE985CA20831}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
