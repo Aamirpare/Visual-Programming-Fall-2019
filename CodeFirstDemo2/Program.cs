@@ -109,11 +109,19 @@ namespace CodeFirstDemo2
         public static void DisplayAllocations()
         {
             //Display Student with courses assinged
-            foreach (var s in DbContext.Students.ToList())
+            var students = from student in DbContext.Students
+                           //where student.FullName.Contains("Farza")
+                           select student;
+
+            //foreach (var s in DbContext.Students.ToList())
+            foreach (var s in students.ToList())
             {
                 Console.WriteLine("Student : " + s.FullName);
                 Console.WriteLine("".PadLeft(50, '-'));
-                foreach (var c in s.Courses)
+                var courses = from course in s.Courses
+                              where course.Title.Contains("System")
+                              select course;
+                foreach (var c in courses)
                 {
                     Console.WriteLine("Tile :" + c.Title);
                     Console.WriteLine("Code :" + c.Code);
@@ -122,6 +130,14 @@ namespace CodeFirstDemo2
             }
 
         }
+
+        public static string[] Names => new string[] 
+        { 
+            "Mango", "Peach", "Pears", "Orange",
+            "Mango", "Peach", "Pears", "Orange",
+            "Mango", "Peach", 
+        };
+
         static void Main(string[] args)
         {
             //AddSingleStudent();
@@ -130,7 +146,23 @@ namespace CodeFirstDemo2
             //DisplayStudents();
             //AddMultipleCourses();
             //AssignAllCourses();
-            DisplayAllocations();
+            //DisplayAllocations();
+
+            var fruits = from n in Names
+                         join m in Names
+                         on n equals m
+                         //where n == "Mango"
+                         select n;
+            var fruits2 = Names.Select(x => x)
+                          .Where(x => x.Contains("Mango"));
+
+            var joined = Names.Join(Names, x => x, y => y, (x, y) => new { x, y })
+                         .Select(n => n.x);
+
+            foreach (var n in joined)
+            {
+                Console.WriteLine( n);
+            }
 
             Console.ReadLine();
         }
