@@ -37,6 +37,7 @@ namespace WindowsFormsDemo
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Text File|*.txt|All Files|*.* ";
+
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 richTextBox1.Text = System.IO.File.ReadAllText(ofd.FileName);
