@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsDemo2
 {
-    public partial class Form1 : Form
+    public partial class Editor : Form
     {
-        public Form1()
+        public Editor()
         {
             InitializeComponent();
         }
@@ -64,5 +64,10 @@ namespace WindowsFormsDemo2
             }
         }
 
+        private void gridViewDemoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new GridViewDemo();
+            frm.ShowDialog();
+        }
     }
 }

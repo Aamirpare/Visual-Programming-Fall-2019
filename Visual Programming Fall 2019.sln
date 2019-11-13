@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstDemo", "CodeFirstD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstDemo2", "CodeFirstDemo2\CodeFirstDemo2.csproj", "{0E30906F-5EBB-4195-8286-6FCAEB1A7739}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsDemo", "WindowsFormsDemo\WindowsFormsDemo.csproj", "{4137EEC6-8605-4B65-88D0-F64E919FC70D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsDemo2", "WindowsFormsDemo2\WindowsFormsDemo2.csproj", "{FF0C305E-D778-408F-8F3E-F0EE0B77E747}"
 EndProject
 Global
@@ -55,10 +53,6 @@ Global
 		{0E30906F-5EBB-4195-8286-6FCAEB1A7739}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E30906F-5EBB-4195-8286-6FCAEB1A7739}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E30906F-5EBB-4195-8286-6FCAEB1A7739}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4137EEC6-8605-4B65-88D0-F64E919FC70D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4137EEC6-8605-4B65-88D0-F64E919FC70D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4137EEC6-8605-4B65-88D0-F64E919FC70D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4137EEC6-8605-4B65-88D0-F64E919FC70D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FF0C305E-D778-408F-8F3E-F0EE0B77E747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FF0C305E-D778-408F-8F3E-F0EE0B77E747}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF0C305E-D778-408F-8F3E-F0EE0B77E747}.Release|Any CPU.ActiveCfg = Release|Any CPU

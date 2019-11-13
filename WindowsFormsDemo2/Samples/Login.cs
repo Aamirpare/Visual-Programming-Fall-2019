@@ -39,7 +39,8 @@ namespace WindowsFormsDemo2
                 }
 
                 this.Hide();
-                var frm = new Form1();
+                var frm = new Editor();
+                frm.WindowState = FormWindowState.Maximized;
                 frm.ShowDialog();
             }
             //else
